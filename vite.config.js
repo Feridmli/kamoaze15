@@ -3,6 +3,14 @@ import path from 'path';
 
 export default defineConfig({
   root: ".",
+  resolve: {
+    alias: {
+      buffer: 'buffer/',
+    },
+  },
+  define: {
+    'global': 'window',
+  },
   build: {
     outDir: "dist",
     chunkSizeWarningLimit: 2000,
